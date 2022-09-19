@@ -1,0 +1,84 @@
+    -> \. /home/turing/z1843045/466/Assignment6.sql
+Query OK, 0 rows affected (0.134 sec)
+
+Query OK, 0 rows affected (0.033 sec)
+
+Query OK, 0 rows affected (0.122 sec)
+
+Query OK, 6 rows affected (0.008 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
++--------+-------------+------+-----+---------+----------------+
+| Field  | Type        | Null | Key | Default | Extra          |
++--------+-------------+------+-----+---------+----------------+
+| dog_id | int(11)     | NO   | PRI | NULL    | auto_increment |
+| breed  | varchar(20) | NO   |     | NULL    |                |
+| name   | varchar(20) | NO   |     | NULL    |                |
+| weight | int(11)     | NO   |     | NULL    |                |
++--------+-------------+------+-----+---------+----------------+
+4 rows in set (0.001 sec)
+
++--------+-------------+-------+--------+
+| dog_id | breed       | name  | weight |
++--------+-------------+-------+--------+
+|      1 | Doberman    | Zeus  |     45 |
+|      2 | Husky       | Titan |     69 |
+|      3 | Shiba Inu   | Tater |     37 |
+|      4 | Wolf Mix    | Angel |     88 |
+|      5 | Mut         | Oreo  |     65 |
+|      6 | Fox Terrier | Jack  |     77 |
++--------+-------------+-------+--------+
+6 rows in set (0.016 sec)
+
+Query OK, 0 rows affected (0.116 sec)
+
+Query OK, 9 rows affected (0.023 sec)
+Records: 9  Duplicates: 0  Warnings: 0
+
++------------+---------+------+-----+---------+----------------+
+| Field      | Type    | Null | Key | Default | Extra          |
++------------+---------+------+-----+---------+----------------+
+| visit_id   | int(11) | NO   | PRI | NULL    | auto_increment |
+| dog_id     | int(11) | YES  | MUL | NULL    |                |
+| Visit_Date | date    | YES  |     | NULL    |                |
+| Visit_Time | time    | YES  |     | NULL    |                |
++------------+---------+------+-----+---------+----------------+
+4 rows in set (0.001 sec)
+
++----------+--------+------------+------------+
+| visit_id | dog_id | Visit_Date | Visit_Time |
++----------+--------+------------+------------+
+|        1 |      1 | 2021-02-14 | 02:14:22   |
+|        2 |      2 | 2021-02-14 | 02:14:22   |
+|        3 |      3 | 2021-02-19 | 01:25:46   |
+|        4 |      4 | 2021-04-11 | 05:46:01   |
+|        5 |      5 | 2021-08-01 | 10:14:04   |
+|        6 |      6 | 2021-10-14 | 07:55:59   |
+|        7 |      1 | 2021-10-20 | 22:22:22   |
+|        8 |      2 | 2021-11-21 | 17:19:49   |
+|        9 |      3 | 2021-12-25 | 23:32:01   |
++----------+--------+------------+------------+
+9 rows in set (0.036 sec)
+
+Query OK, 0 rows affected (0.031 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 6 rows affected (0.034 sec)
+Rows matched: 6  Changed: 6  Warnings: 0
+
++----------+--------+------------+------------+---------+
+| visit_id | dog_id | Visit_Date | Visit_Time | VetBill |
++----------+--------+------------+------------+---------+
+|        1 |      1 | 2021-02-14 | 02:14:22   |       0 |
+|        2 |      2 | 2021-02-14 | 02:14:22   |       0 |
+|        3 |      3 | 2021-02-19 | 01:25:46   |       0 |
+|        4 |      4 | 2021-04-11 | 05:46:01   |     199 |
+|        5 |      5 | 2021-08-01 | 10:14:04   |     199 |
+|        6 |      6 | 2021-10-14 | 07:55:59   |     199 |
+|        7 |      1 | 2021-10-20 | 22:22:22   |     199 |
+|        8 |      2 | 2021-11-21 | 17:19:49   |     199 |
+|        9 |      3 | 2021-12-25 | 23:32:01   |     199 |
++----------+--------+------------+------------+---------+
+9 rows in set (0.000 sec)
+
+MariaDB [z1843045]> \t
